@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyePowerCheck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">👁 EyePowerCheck</div>
+        <button class="nav-btn" onclick="showScreen('home')">Home</button>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="screen active">
+            <div class="hero">
+                <div class="hero-text">
+                    <span class="tag">SMART EYESIGHT SCREENING</span>
+
+                    <h1>Check your vision.<br>
+                        <span>From anywhere.</span>
+                    </h1>
+
+                    <p>
+                        EyePowerCheck provides a simple preliminary
+                        eyesight screening experience using your device.
+                    </p>
+
+                    <button class="primary-btn" onclick="showScreen('instructions')">
+                        Start Eye Check →
+                    </button>
+
+                    <p class="disclaimer">
+                        ⚠ This is a preliminary screening tool and not a medical diagnosis.
+                    </p>
+                </div>
+
+                <div class="eye-card">
+                    <div class="eye-icon">👁️</div>
+                    <h3>Your vision matters.</h3>
+                    <p>Let's perform a quick screening.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- INSTRUCTIONS -->
+        <section id="instructions" class="screen">
+            <div class="container">
+                <span class="tag">STEP 01</span>
+                <h2>Before we begin</h2>
+                <p class="subtitle">
+                    Follow these instructions for a better screening experience.
+                </p>
+
+                <div class="instruction-grid">
+
+                    <div class="instruction-card">
+                        <div>📱</div>
+                        <h3>Keep your device steady</h3>
+                        <p>Place your phone or laptop in a stable position.</p>
+                    </div>
+
+                    <div class="instruction-card">
+                        <div>📏</div>
+                        <h3>Maintain distance</h3>
+                        <p>Keep yourself at the recommended distance from the camera.</p>
+                    </div>
+
+                    <div class="instruction-card">
+                        <div>💡</div>
+                        <h3>Good lighting</h3>
+                        <p>Make sure your face is clearly visible and the room is well lit.</p>
+                    </div>
+
+                    <div class="instruction-card">
+                        <div>👓</div>
+                        <h3>Remove glasses</h3>
+                        <p>Remove glasses if the test specifically asks you to do so.</p>
+                    </div>
+
+                </div>
+
+                <button class="primary-btn" onclick="showScreen('camera')">
+                    Continue →
+                </button>
+            </div>
+        </section>
+
+
+        <!-- CAMERA -->
+        <section id="camera" class="screen">
+            <div class="container center">
+
+                <span class="tag">STEP 02</span>
+                <h2>Position yourself</h2>
+
+                <p class="subtitle">
+                    Allow camera access and position your face inside the frame.
+                </p>
+
+                <div class="camera-box">
+                    <div class="camera-placeholder">
+                        <div class="face-outline">🙂</div>
+                        <p>Camera preview</p>
+                        <small>Camera will appear here</small>
+                    </div>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Position your face correctly
+                </div>
+
+                <button class="primary-btn" onclick="showScreen('test')">
+                    Begin Eye Test →
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- TEST -->
+        <section id="test" class="screen">
+            <div class="container center">
+
+                <span class="tag">STEP 03</span>
+                <h2>Visual Acuity Test</h2>
+
+                <p class="subtitle">
+                    Look at the character below and select what you see.
+                </p>
+
+                <div class="test-card">
+                    <div class="letter">E</div>
+                </div>
+
+                <div class="options">
+                    <button onclick="selectAnswer(this)">E</button>
+                    <button onclick="selectAnswer(this)">F</button>
+                    <button onclick="selectAnswer(this)">P</button>
+                    <button onclick="selectAnswer(this)">T</button>
+                </div>
+
+                <button class="primary-btn" onclick="showScreen('result')">
+                    Submit Answer →
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- RESULT -->
+        <section id="result" class="screen">
+            <div class="container center">
+
+                <span class="tag">SCREENING COMPLETE</span>
+
+                <div class="result-icon">✓</div>
+
+                <h2>Your screening is complete</h2>
+
+                <p class="subtitle">
+                    Your preliminary result has been generated.
+                </p>
+
+                <div class="result-card">
+                    <h3>Preliminary Result</h3>
+                    <div class="result-value">Normal Range</div>
+                    <p>
+                        Based on your responses, no significant difficulty
+                        was detected during this preliminary screening.
+                    </p>
+                </div>
+
+                <p class="disclaimer">
+                    This result is not a medical diagnosis. Consult an
+                    eye-care professional for an accurate examination.
+                </p>
+
+                <button class="primary-btn" onclick="showScreen('home')">
+                    Back to Home
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
