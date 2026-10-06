@@ -335,3 +335,4 @@ elif st.session_state.page == "result":
     if st.button("Back to Home", type="primary"):
         go_to("home")
         st.rerun()
+
